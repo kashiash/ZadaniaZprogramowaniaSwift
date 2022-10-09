@@ -31,6 +31,25 @@ print(extractDate(date: currentDate, format: "YYYY-MM-dd"))
 print(extractDate(date: currentDate, format: "YY/MM/dd"))
 ``` 
 
+można rozszerzyć typ Data:
+
+
+``` Swift
+extension Date {
+   func getFormattedDate(format: String) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.string(from: self)
+    }
+}
+``` 
+
+i wywoływać tak:
+
+``` Swift
+let format = date.getFormattedDate(format: "yyyy-MM-dd HH:mm:ss") 
+``` 
+
 przykłady formatów:
 ``` txt
 Wednesday, Sep 12, 2018           --> EEEE, MMM d, yyyy
