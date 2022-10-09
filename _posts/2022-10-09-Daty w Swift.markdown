@@ -76,6 +76,10 @@ extension String {
 
     }
 }
+// wywołanie:
+
+let date2string = "2022-10-10T21:08:13"
+let date2 = date2string.toDate(withFormat: "yyyy-MM-dd'T'HH:mm:ss")
 ``` 
 
 
