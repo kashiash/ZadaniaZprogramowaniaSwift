@@ -7,9 +7,13 @@ Zamiana daty na string
 let currentDate = Date()
 let dateFormatter = DateFormatter()
 dateFormatter.dateFormat = "YYYY-MM-dd"
+dateFormatter.locale = Calendar.current.locale
 
 let currentDayString = dateFormatter.string(from: currentDate)
 ```
+
+**Uwaga: Jesli nie wskazemy locale/timezone to uzywany jest czas UTC !!!**
+
 można to zamienić na funkcję: 
 
 ``` Swift
@@ -39,6 +43,8 @@ extension Date {
    func getFormattedDate(format: String) -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format
+      //  dateFormatter.locale = Locale(identifier: "pl-PL")
+         dateFormatter.locale = Calendar.current.locale
         return dateformat.string(from: self)
     }
 }
@@ -61,6 +67,8 @@ extension String {
      //   dateFormatter.timeZone = TimeZone(identifier: "Asia/Tehran")
      //   dateFormatter.locale = Locale(identifier: "fa-IR")
      //   dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.locale = Calendar.current.locale
+
         dateFormatter.dateFormat = format
         let date = dateFormatter.date(from: self)
 
