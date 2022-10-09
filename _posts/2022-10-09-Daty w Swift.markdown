@@ -63,3 +63,8 @@ Wed, 12 Sep 2018 14:11:54 +0000   --> E, d MMM yyyy HH:mm:ss Z
 12.09.18                          --> dd.MM.yy
 10:41:02.112                      --> HH:mm:ss.SSS
 ```
+
+
+więcej tutaj:
+
+http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
