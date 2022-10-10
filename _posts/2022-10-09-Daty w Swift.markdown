@@ -83,6 +83,13 @@ let date2 = date2string.toDate(withFormat: "yyyy-MM-dd'T'HH:mm:ss")
 ``` 
 
 
+
+Wyswietlanie daty w Swift UI
+
+``` Swift
+Text(Date.now.formatted(date: .long, time: .shortened))
+```
+
 przykłady formatów:
 ``` txt
 Wednesday, Sep 12, 2018           --> EEEE, MMM d, yyyy
